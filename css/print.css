@@ -1,0 +1,47 @@
+@media print {
+  /*Styles for print format for the generated form - A4 sheet, Landscape */
+
+
+  /*Make the heading, the navigation bar, the time division and the menu icon invisible in print*/
+  h3, .menu_button, #timeDetails, aside,.populate {
+    display: none !important;
+  }
+
+/*Increase the height of the main border*/
+  section {
+    height: 780px !important;
+  }
+
+  /*Provide spacing among the table cells*/
+  td, th {
+    padding: 5px !important;
+  }
+  td {
+    margin-left: 15px !important;
+  }
+
+  /*Make the notice and the signature portion below the table be proportionately positioned according to the height of the main border*/
+  #notice, .signature {
+    margin-top: 70px !important;
+  }
+
+/*Provide adequate spacing among the institution name, region, district, month and year */
+  .spacious {
+    margin-left: 50px !important;
+  }
+.fillIn {
+  margin-left: 5px !important;
+}
+
+#inst, #reg, #dist, #mnt, #yr {
+  font-size: 18px !important;
+}
+#division {
+  margin-left: 100px !important;
+}
+
+/*Print button becomes invisible*/
+#print {
+  display: none !important;
+}
+}

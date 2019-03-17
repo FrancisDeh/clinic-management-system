@@ -1,0 +1,239 @@
+/*Stylesheet for html*/
+* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+ol {
+	padding-left: 1.4em;
+	list-style: decimal;
+}
+ul {
+	padding-left: 1.4em;
+	list-style: square;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+/* end reset browser styles */
+
+
+html {
+  background-color: silver;
+  height: auto;
+  font-family: 'Palatino Linotype', serif;
+}
+fieldset {
+  width: 500px;
+}
+
+section {
+
+
+	width: 80%;
+	border: 2px solid orange;
+	height: auto;
+	padding-left: 5px;
+	padding-right: 5px;
+  position: absolute;
+  left: 30px;
+  right: 50px;
+  top: 10px;
+  padding: 10px;
+  background-color: #fff;
+  float: right;
+  box-shadow: -5px 0 5px #fff, 5px 0 5px #fff;
+}
+aside {
+  position:fixed;
+  right: 0;
+  top: 140px;
+  width: 200px;
+  background-color: #fff;
+
+}
+.left {
+  float: left;
+}
+.left fieldset{
+  width: 500px;
+}
+.right {
+  float: right;
+}
+label {
+    width: 150px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 5px;
+}
+input {
+  margin: 8px;
+	padding: 3px;
+}
+textarea {
+  margin: 8px;
+  width: 200px;
+	font-size: large;
+}
+legend {
+  color: orange;
+  font-weight: bold;
+}
+
+#radio label {
+  width: 100px;
+  display: inline;
+  margin-top: 0;
+}
+input[type="text"], input[type="date"]{
+	width: 200px;
+	height: 30px;
+	}
+	input[type="number"]{
+		width: 80px;
+	}
+	select {
+		width: 200px;
+		height: 50px;
+		padding: 5px;
+		margin: 10px;
+		color: blue;
+		background-color: silver;
+		opacity: .7;
+	}
+	/*also a select button*/
+	#year, .month {
+		width: 80px;
+		height: 30px;
+	}
+
+	input[type="radio"], input[type="checkbox"] {
+		cursor: hand;
+	}
+input:focus, textarea:focus {
+	background-color: silver;
+	}
+  header {
+    position: scroll;
+	top: 0;
+	vertical-align: middle;
+	width: 100%;
+	background-color: rgb(255, 255, 255);
+	padding: 5px 0 15px 0;
+	text-align: center;
+	color: blue;
+	text-shadow: 2px 2px 1px rgba(255,255,255,.5);
+	font: normal 50px 'Palatino Linotype', Arial, sans-serif;
+	letter-spacing: 2px;
+    height: 50px;
+    opacity: 1;
+    z-index: 100;
+border: 1px solid #fff;
+border-radius: 8px;
+background-image: -webkit-linear-gradient(top, silver 0%, white 50%, orange 50%, white 100%);
+  }
+#timeDetails {
+	  position: absolute;
+	  right: 0;
+	  top: 5px;
+	  height: auto;
+	  color: orange;
+	  font-size: x-large;
+	  text-align: center;
+	  background-color: #fff;
+	  margin: 5px;
+	  width: 180px;
+	  padding: 5px;
+	  border-radius: 5px;
+	  border: 1px solid orange;
+	}
+
+	h3 {
+		text-align: center;
+		border: 1px solid #fff;
+		background-color: orange;
+		color: white;
+		border-radius: 5px;
+		opacity: .9;
+		width: 400px;
+		margin-left: 300px;
+	}
+	/*This is for the reset and the submit buttons*/
+	.controls {
+		margin-left: 100px;
+	}
+	input[type="reset"], input[type="submit"] {
+	  padding: 10px;
+	  margin: 5px;
+		background-color: orange;
+		color: white;
+		font-weight: bold;
+		width: 150px;
+		cursor: hand;
+	}
+	/*This is for the search box*/
+.searchBox {
+		position: absolute;
+		top: 400px;
+		right: 0;
+		width: 200px;
+		height: 100px;
+		background-color: white;
+		color: orange;
+		padding: 5px;
+	}
+	/*Sets color for "Tick if patient is less than a year old"*/
+	.ageInfo, .status , .insured,.nameInfo{
+		color: blue;
+		font-weight: bold;
+	}
+	.status {
+		margin-top: 5px;
+	}
+.error {
+	color: #F00;
+	font-weight: bold;
+	font-style: italic;
+}
+.figures {
+	color: red;
+	font-weight: bold;
+}
+.accountCreated{
+	color: blue;
+	font-size: x-large;
+	z-index: 100;
+	position: absolute;
+	left: 100px;
+  top: -15px;
+}
+.accountError {
+	color: red;
+	font-size: x-large;
+	z-index: 100;
+	position: absolute;
+	left: 100px;
+  top: -15px;
+}

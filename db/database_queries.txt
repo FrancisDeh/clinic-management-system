@@ -1,0 +1,89 @@
+Clinic Management System
+started: Monday, 31 October 2016
+finished: Sunday, 18 December 2016
+number of days: 49 days(all days was not used, 24 hours not used)
+
+/*Table for holding patient records*/---created
+
+CREATE TABLE patients( 
+pid VARCHAR(10) PRIMARY KEY NOT NULL,
+reg_no INT NOT NULL,
+year_of_reg INT NOT NULL,
+date_of_reg VARCHAR(10) NOT NULL,
+name VARCHAR(100) NOT NULL,
+educational_level VARCHAR(10) NOT NULL,
+date_0f_birth VARCHAR(10) NOT NULL,
+month_age INT,
+year_age INT,
+gender CHAR(1) NOT NULL,
+marital_status VARCHAR(100) NOT NULL,
+home_address VARCHAR(50),
+postal_address VARCHAR(50),
+locality VARCHAR(50),
+occupation VARCHAR(50),
+tel VARCHAR(23),
+religion VARCHAR(20) NOT NULL,
+name_of_relative VARCHAR(100),
+address_of_relative VARCHAR(50),
+exp_date VARCHAR(10),
+insurance_number VARCHAR(8),
+scheme_id VARCHAR(13),
+insurance_state VARCHAR(11) NOT NULL,
+month_of_reg INT NOT NULL);
+
+#build index using pid and name
+/*INDEX FOR PID AND NAME*/---done
+CREATE INDEX pid_index ON patients(pid);
+CREATE INDEX name_index ON patients(name);
+
+#dropping index
+DROP INDEX pid_index;
+
+/*Table for holding users record*/------created
+CREATE TABLE users (user_id INT AUTO_INCREMENT PRIMARY KEY,
+first_name VARCHAR(50) NOT NULL,
+surname VARCHAR(50) NOT NULL,
+username VARCHAR(20) NOT NULL,
+password VARCHAR(50) NOT NULL);
+
+/*Table for user secret pin*/---created
+CREATE TABLE user_secret_pin (number INT PRIMARY KEY,
+secret_pin VARCHAR(7) NOT NULL);
+
+#inserting data into secret pin table----done
+INSERT INTO user_secret_pin VALUES (1, 'med5cln');
+
+/*Table for patient diagnosis made by doctor*/----created
+CREATE TABLE patient_diagnosis(
+number INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+pid VARCHAR(10) NOT NULL,
+date_of_diagnosis VARCHAR(20) NOT NULL,
+month_of_diagnosis INT NOT NULL,
+yr_of_diagnosis VARCHAR(4) NOT NULL,
+diagnosis VARCHAR(1000),
+medication VARCHAR(1000),
+remarks VARCHAR(1000));
+
+#build index for pid, month of diagnosis and year of diagnosis
+/*index for pid, month of diagnosis and year of diagnosis*/---done
+CREATE INDEX pid_index ON patient_diagnosis(pid);
+CREATE INDEX month_index ON patient_diagnosis(month_of_diagnosis);
+CREATE INDEX year_index ON patient_diagnosis(yr_of_diagnosis);
+
+
+/*Query to populate the table*/
+SELECT COUNT(d.pid) FROM patients p, patient_diagnosis d WHERE d.pid = p.pid AND
+d.month_of_diagnosis = 2 AND
+d.yr_of_diagnosis = '2016' AND
+p.insurance_state = 'Insured' AND 
+p.gender = 'M' AND
+p.month_of_reg = 2 AND p.year_of_reg = 16 AND
+p.year_age BETWEEN 1 AND 4;
+
+SELECT COUNT(d.pid) FROM patients p, patient_diagnosis d WHERE d.pid = p.pid AND
+d.month_of_diagnosis = 2 AND
+d.yr_of_diagnosis = '2016' AND
+p.insurance_state = 'Insured' AND 
+p.gender = 'M' AND
+p.month_of_reg < 2 AND p.year_of_reg = 16 AND
+p.year_age BETWEEN 1 AND 4;

@@ -1,0 +1,238 @@
+/*Stylesheet for html*/
+* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1.2;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+ol {
+	padding-left: 1.4em;
+	list-style: decimal;
+}
+ul {
+	padding-left: 1.4em;
+	list-style: square;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+/* end reset browser styles */
+
+html {
+	width: 100%;
+	background-color: silver;
+	font-family: "Palatino Linotype", san-serif;
+	max-width: 1200px;
+	}
+
+  section {
+	position: absolute;
+	top: 13%;
+	right: 25%;
+	left: 10%;
+	border: 1px solid white;
+	border-radius: 10px;
+	background-color: rgb(255, 255, 255);
+	box-shadow: -3px 0 0 blue, 3px 0 0 blue;
+	}
+
+section .loginInfo {
+	float: right;
+	background-color: #fff;
+	border-radius: 10px;
+	}
+	.header {
+	position: scroll;
+	top: 0;
+	margin-left: 130px;
+	width: 1000px;
+	text-align: center;
+	background-color: rgb(255, 255, 255);
+	padding: 5px 0 15px 0;
+	color: blue;
+	text-shadow: 2px 2px 1px rgba(255,255,255,.5);
+	font: normal 50px 'Palatino Linotype', Arial, sans-serif;
+	letter-spacing: 2px;
+	height: 50px;
+	opacity: 1;
+z-index: 100;
+border: 1px solid silver;
+border-radius: 8px;
+background-image: -webkit-linear-gradient(top, white 0%, silver 20%, white 50%, silver 80%, white 100%);
+	}
+
+	section .welcomeNote {
+	float: left;
+	max-width: 40%;
+	text-align: center;
+	background-color: #fff;
+	margin: 5%;
+	}
+	/*style for labels for credentials to sign in*/
+	.loginInfo label {
+		width: 100px;
+	}
+  legend {
+	font-style: italic;
+	color: #3152a5;
+	}
+
+label {
+	display: inline-block;
+	font-family: "Palatino Linotype", monospace;
+	vertical-align: top;
+	margin: 5px;
+	margin-bottom: 0;
+	padding: 5px;
+	width: 200px;
+	color: orange;
+	font-size: large;
+	}
+input {
+	margin: 5px;
+	}
+input[type="text"], input[type="password"] {
+	width: 200px;
+	height: 30px;
+	}
+form {
+	margin: 5px;
+	}
+
+
+input:focus {
+	background-color: silver;
+	}
+
+em {
+	display: block;
+	border-top: 1px solid #fff;
+	padding: 5px;
+	}
+  button  {
+  	font-size: 20px;
+  	text-decoration: none;
+  	color: #fff;
+  	}
+
+		/*This is for the reset and the submit buttons*/
+		.controls {
+			margin-left: 100px;
+		}
+		input[type="reset"], input[type="submit"] {
+		  padding: 10px;
+		  margin: 5px;
+			background-color: orange;
+			color: white;
+			font-weight: bold;
+			width: 150px;
+			cursor: hand;
+		}
+		/*This is for the search box*/
+		.createAccount{
+			position: absolute;
+			top: 90px;
+			right: 10px;
+			width: 310px;
+			height: auto;
+			background-color: white;
+			color: orange;
+			padding: 5px;
+			z-index: 50;
+			border: 2px blue solid;
+			border-radius: 5px;
+		}
+		section img {
+			opacity: .9;
+			margin-left: 50px;
+			padding: 15px;
+			}
+/*style for  button*/
+#forgotPassword {
+	margin: 10px;
+	padding: 5px;
+}
+.error {
+	color: #F00;
+	font-weight: bold;
+	font-style: italic;
+		width: 270px;
+}
+.intro {
+	font-family: "Palatino Linotype", san-serif;
+	font-size: x-large;
+	background-color: #c6b5de;
+	border-radius: 5px;
+	padding: 5px;
+	border: 5px dashed #fff;
+	line-height: 140%;
+		}
+		#timeDetails {
+			  position: absolute;
+			  right: 0;
+			  top: 0;
+			  height: auto;
+			  color: blue;
+			  font-size: x-large;
+			  text-align: center;
+			  background-color: #fff;
+			  margin: 5px;
+			  width: 180px;
+			  padding: 5px;
+			  border-radius: 5px;
+			  border: 1px solid silver;
+			}
+.logo {
+	position: absolute;
+	z-index: 1000;
+	width: 120px;
+	height: 120px;
+	cursor: hand;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: transform;
+	transition-property: transform;
+	-webkit-transition-duration: 1s;
+	transition-duration: 1s;
+	}
+
+.logo:hover {
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+	}
+.accountCreated {
+	color: orange;
+	font-size: xx-large;
+	z-index: 100;
+	position: absolute;
+	top: 9%;
+	right: 27%;
+}
+.accountExist, .accountError, .notification {
+	color: red;
+	font-size: xx-large;
+	z-index: 100;
+	position: absolute;
+	top: 9%;
+	right: 27%;
+}
